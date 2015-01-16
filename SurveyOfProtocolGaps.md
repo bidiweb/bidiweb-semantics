@@ -108,7 +108,7 @@ However, we like to note that the so-called end-to-end argument applies here too
 
 ## Acknowledgements
 
-Thanks to Roberto Peon, Ilya Grigorik, Adam Rice, Yutaka Hirano, Domenic Denicola for their inputs on related work. This doesn't mean that they endorsed opinions in this survey.
+Thanks to Roberto Peon, Ilya Grigorik, Adam Rice, Yutaka Hirano, Domenic Denicola for their inputs on related work. This doesn't mean that they have endorsed opinions in this doc.
 
 ## References
 
