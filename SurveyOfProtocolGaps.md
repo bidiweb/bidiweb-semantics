@@ -73,12 +73,11 @@ The following semantics are missing from the standard HTTP protocol semantics (o
 
 1. Message boundary
 1. Message-level metadata
-1. Keep-alive
 1. Non-buffering proxy
 
 In addition, XMLHttpRequest Web application API [XHR] does not support any form of streaming (formally).
 
-The new Fetch API [FETCH] + Streams API [STREAMS] will expose to the application the full HTTP semantics, including full-duplex communication [FULLDUPLEX]. In addition, the new API also supports message boundary and optionally message-level metadata with application supplied Transformer [STREAMS].  So this leaves only #3 and #4 to be desired. #3 can always be supported at the application level. With SPDY and the wide adoption of HTTPS, #4 is becoming less of a concern for many environments. 
+The new Fetch API [FETCH] + Streams API [STREAMS] will expose to the application the full HTTP semantics, including full-duplex communication [FULLDUPLEX]. In addition, the new API also supports message boundary and optionally message-level metadata with application supplied Transformer [STREAMS].  So this leaves only #3 to be desired. With SPDY and the wide adoption of HTTPS, #3 is becoming less of a concern for many environments. 
 
 We should note that semantics offered by the API layer won’t be visible to proxies. E.g. a proxy won’t be able to enable any message-level throttling without knowing the message boundary at the wire-level. 
 
@@ -89,10 +88,9 @@ The following semantics are missing from the WS protocol or its Web application 
 1. Half-close
 1. Flow-control
 1. Message-level metadata
-1. Keep-alive
 1. Multiplexing and session priority.
 
-WS over HTTP/2 will address #5, and then additional API changes are required to support #1 and #2. However, with HTTP/2, proxy buffering may become an issue again.
+WS over HTTP/2 will address #4, and then additional API changes are required to support #1 and #2. However, with HTTP/2, proxy buffering may become an issue again.
 
 ## The Layering Concern
 
