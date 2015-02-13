@@ -81,6 +81,8 @@ The new Fetch API [FETCH] + Streams API [STREAMS] will expose to the application
 
 We should note that semantics offered by the API layer won’t be visible to proxies. E.g. a proxy won’t be able to enable any message-level throttling without knowing the message boundary at the wire-level. 
 
+Keep-alive is supported by the HTTP/2 protocol. There is no Web application API defined yet to manage keep-alive messages from the client side.
+
 ## WebSocket Gaps
 
 The following semantics are missing from the WS protocol or its Web application API:
@@ -91,6 +93,8 @@ The following semantics are missing from the WS protocol or its Web application 
 1. Multiplexing and session priority.
 
 WS over HTTP/2 will address #4, and then additional API changes are required to support #1 and #2. However, with HTTP/2, proxy buffering may become an issue again.
+
+Keep-alive is supported by the WebSocket protocol. There is no Web application API defined yet to manage keep-alive messages from the client side.
 
 ## The Layering Concern
 
