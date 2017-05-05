@@ -73,3 +73,4 @@ Examples: Java/Servlet async I/O, ....
 
 * default behavior will protect the app in a very straightforward way, esp. by leveraging the buffer owned by the transport
 * default behavior hurts throughput, esp. if the link is slow
+* sync API often shares the same properties
